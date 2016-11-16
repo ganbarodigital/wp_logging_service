@@ -1,8 +1,11 @@
 <?php
 
 use GanbaroDigital\ServiceLogger\V1\BuildServiceLogger;
+use GanbaroDigital\ServiceLogger\V1\ServiceFormatter;
 use GanbaroDigital\ServiceLogger\V1\ServiceLogger;
 use Monolog\Handler\StreamHandler;
+use Monolog\Processor\IntrospectionProcessor;
+use Monolog\Processor\UidProcessor;
 
 /*
  * Exit if called directly.
@@ -12,17 +15,27 @@ if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
-class WP_LOG
+class PSR3_LOG
 {
+    /**
+     * a PSR3-compliant logger for you to use
+     *
+     * @var ServiceLogger
+     */
     public static $logger;
 
+    /**
+     * creates a new logger
+     *
+     * @return void
+     */
     public static function init()
     {
         // here's the default config we're going to use, if none is
         // provided
         $defaultConfig = [
             'min_log_level' => 'INFO',
-            'log_file' => ABS_PATH . '/blog.log',
+            'log_file' => ABSPATH . 'blog.log',
         ];
 
         // TODO: get overrides from the WP database
@@ -44,4 +57,4 @@ class WP_LOG
     }
 }
 
-WP_LOG::init();
+PSR3_LOG::init();
