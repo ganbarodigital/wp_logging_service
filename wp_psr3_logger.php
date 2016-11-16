@@ -1,16 +1,8 @@
 <?php
-/**
- * Logging Service For PHP
- *
- * @package   WP Logging Service
- * @author    Stuart Herbert
- * @license   new BSD
- * @link      https://github.com/ganbarodigital/wp_logging_service
- */
 
 /**
- * Plugin Name:       Wordpress Logging Service
- * Plugin URI:        https://github.com/ganbarodigital/wp_logging_service
+ * Plugin Name:       PSR3 Logger
+ * Plugin URI:        https://github.com/ganbarodigital/wp_psr3_logger
  * Description:       This plugin provides a PSR3-compliant logger for your plugin to use
  * Version:           1.0.0
  * Author:            Ganbaro Digital
@@ -20,7 +12,7 @@
  * Domain Path:       /languages
  * Text Domain:       wp_logging_service
  * Network:           true
- * GitHub Plugin URI: https://github.com/ganbarodigital/wp_logging_service
+ * GitHub Plugin URI: https://github.com/ganbarodigital/wp_psr3_logger
  * GitHub Branch:     develop
  * Requires WP:       4.0
  * Requires PHP:      5.6
@@ -38,4 +30,4 @@ if ( ! defined( 'WPINC' ) ) {
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // this creates our logger
-require_once(__DIR_- . '/src/logging_service.php');
+require_once(__DIR__ . '/src/logging_service.php');
