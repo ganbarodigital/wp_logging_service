@@ -1,0 +1,20 @@
+{
+    "name": "ganbarodigital/wp_logging_service",
+    "type": "plugin",
+    "license": "BSD-3-Clause",
+    "authors": [
+        { "name": "Stuart Herbert", "email": "stuart@stuartherbert.com" }
+    ],
+    "require": {
+        "php": ">= 5.5",
+        "ganbarodigital/php-mv-service-logger": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GanbaroDigital\\WP\\LoggingService\\": "src"
+        }
+    },
+	"config": {
+		"classmap-authoritative": true
+	}
+}
